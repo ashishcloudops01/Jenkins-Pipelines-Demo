@@ -1,0 +1,33 @@
+pipeline {
+	agent any
+
+stages {
+	stage ('Parallel Stage'){
+		parallel {
+			stage	('Stage-1')
+			{
+				steps{
+				echo "Welcome to CloudOps!!"
+				sleep 5
+				}
+			}	
+			stage	('Stage-2')
+			{
+				steps{
+				echo "Learning DevOps!!"
+				sleep 5
+				}
+			}
+			stage	('Stage-3')
+			{
+				steps{
+				echo "Automation"
+				sleep 5
+				}
+			}	
+	
+
+		}
+	}
+  }
+}
